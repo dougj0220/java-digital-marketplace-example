@@ -1,0 +1,3 @@
+certify-batch -merchant merchant -accountant digital-accountant -type CraterDogs -count 10
+merchant
+quit

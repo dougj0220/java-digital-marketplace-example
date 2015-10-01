@@ -1,0 +1,6 @@
+{
+  "status" : "Succeeded",
+  "reason" : "Created",
+  "identityLocation" : "http://foo.com/IdentityManagement/identity/GAXT95J7N6STQDHCXVXFPXRXWHF1B7NR",
+  "certificateLocation" : "http://foo.com/IdentityManagement/certificate/AL03T5XMGM85B85Q4PY412MPSFQ689SD"
+}

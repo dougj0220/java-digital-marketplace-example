@@ -1,0 +1,28 @@
+{
+  "status" : "Succeeded",
+  "reason" : "OK",
+  "identity" : {
+    "attributes" : {
+      "myLocation" : "http://foo.com/IdentityManagement/identity/MW5Y20MT6NTPVYDGG1P5HZK9PH8DC2MM",
+      "watermark" : {
+        "hashingAlgorithm" : "SHA256",
+        "signingAlgorithm" : "SHA1withRSA",
+        "majorVersion" : 1,
+        "minorVersion" : 0,
+        "creationTimestamp" : "2015-10-01T16:09:42.751Z",
+        "expirationTimestamp" : "2083-10-19T19:23:49.751Z"
+      },
+      "foo" : 5,
+      "bar" : "baz"
+    },
+    "identitySeal" : {
+      "timestamp" : "2015-10-01T16:09:42.766Z",
+      "documentType" : "Identity Attributes",
+      "documentSignature" : "6FTXF18P2VC9GCMN17W40BJYWN4450X7G343A9QXG1AFLTZP77X6T4CSYR1ZR9050W6P62FS2HAC3Z8SQR98ARLVK1NM4MB14644136F7XCGZPV6BGPT3R93ZW9VPWFWF6B1QP8J62FSW2NG2X7WA41ZGNMQQJ5P4QH7ST7MPFTPF7DHQBFX1BZLN6D0J5LA4D9KV2GNZRBC2YDM6CWDQZT5Z9STK6JB79QDYDPX9TXGBR94LVXBTPRT7JB6ADKZ15MRLYVT3A1T4XBTW1JLA6JTKS9VVK2LB8ZMAZN9KG5NCMHCKC1770BKZGS1F3BA9BQLKWQ8P7YKRNB6BCQ9DBPHT29R7Z5Z05TJD7M4C1ZHMDA41MSY93YKDGKLKH6ZHGWQW57FYWDF3WXPGABWFKHXLM",
+      "verificationCitation" : {
+        "documentLocation" : "http://foo.com/IdentityManagement/certificate/AAAM05RGV20B2NSHCSK824KFATDN2BP1",
+        "documentHash" : "TP28KX9PDXH7M4W8ZR3ABJDAL4WMRK6DN1M5T1L9HMGKV6C1BXA0"
+      }
+    }
+  }
+}

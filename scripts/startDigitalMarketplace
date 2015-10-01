@@ -1,0 +1,6 @@
+#!/bin/bash
+
+PROGRAM=$(basename $0)
+DIRECTORY=$(dirname $0)/..
+
+java -Dserver.port=8080 -jar ${DIRECTORY}/java-digital-marketplace-web/target/java-digital-marketplace-web-1.0-SNAPSHOT-exec.jar

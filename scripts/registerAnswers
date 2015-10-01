@@ -1,0 +1,5 @@
+register-identity -pseudonym merchant
+merchant
+register-identity -pseudonym consumer
+consumer
+quit

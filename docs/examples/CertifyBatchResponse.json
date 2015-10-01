@@ -1,0 +1,12 @@
+{
+  "status" : "Succeeded",
+  "reason" : "Created",
+  "batchLocation" : "http://foo.com/TokenManagement/batch/R9R9A0PHK4K4MF0NX19BWDHAAP08PNGP",
+  "tokenLocations" : [
+    "http://foo.com/TokenManagement/token/GGW2ATPVN8VYTCJBXNYTRP88X8MYRRVY",
+    "http://foo.com/TokenManagement/token/9HD2J33QR3Z3RRGLC95FATNWF5LVLZPM",
+    "http://foo.com/TokenManagement/token/CCTCNNRH9HBKJ9RVJJTR7S1ZV85GFDRQ",
+    "http://foo.com/TokenManagement/token/0Q1N6CAHG6N8K9V0AY5D5Q1SLVZM3DFA",
+    "http://foo.com/TokenManagement/token/5APNXWA5CV9L29XRA15970GPR11HZS3J"
+  ]
+}

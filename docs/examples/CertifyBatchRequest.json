@@ -1,0 +1,136 @@
+{
+  "guarantorLocation" : "http://foo.com/IdentityManagement/identity/B941X8V0CDVWZKAYZNVL8SNFZMQGG9SF",
+  "batchLocation" : "http://foo.com/TokenManagement/batch/R9R9A0PHK4K4MF0NX19BWDHAAP08PNGP",
+  "tokens" : [
+    {
+      "attributes" : {
+        "myLocation" : "http://foo.com/TokenManagement/token/GGW2ATPVN8VYTCJBXNYTRP88X8MYRRVY",
+        "batchLocation" : "http://foo.com/TokenManagement/batch/R9R9A0PHK4K4MF0NX19BWDHAAP08PNGP",
+        "guarantorLocation" : "http://foo.com/IdentityManagement/identity/B941X8V0CDVWZKAYZNVL8SNFZMQGG9SF",
+        "accountantLocation" : "http://foo.com/IdentityManagement/identity/GAXT95J7N6STQDHCXVXFPXRXWHF1B7NR",
+        "tokenType" : "Star Bucks",
+        "watermark" : {
+          "hashingAlgorithm" : "SHA256",
+          "signingAlgorithm" : "SHA1withRSA",
+          "majorVersion" : 1,
+          "minorVersion" : 0,
+          "creationTimestamp" : "2015-10-01T16:09:48.570Z",
+          "expirationTimestamp" : "2016-09-30T16:09:48.570Z"
+        }
+      },
+      "guarantorSeal" : {
+        "timestamp" : "2015-10-01T16:09:48.581Z",
+        "documentType" : "Token Attributes",
+        "documentSignature" : "DH6G2AMF9B8YDTS3KG4R5W375S3NR0RM6AH77NNX6LD77CWVSJ37BA8P6QJ6GRZTPGKHQL7G210ZDLD447L79K8F72LSF3L9SVHRKQ79RV3T6P1T79XX300MADJVFA4KKY83CH35AGZYR4HKB5N714714NBP2AKMQZ857RXX26ZXYNWBHB30V0MXQTCTM5L5TTCRCFYJZYWKV87FDC801FNC0RD95A6G38KHHVR9VPJP1RVVM5YCJ5V5T5LMW0T6P3BZL51NS9GMTS8MFQPS5J4D4A3RRFDMP063ANQ4WAC2G8J6299LBJNB3MC7VDSAV56LK2GGV7H9MRNRQ25VRX7YKJ4VT1AD2T6GS43W8A66H0JGN8TCVTKDFXTVRPDAH2AVZJNXV37949RTPQQYB943Q4",
+        "verificationCitation" : {
+          "documentLocation" : "http://foo.com/IdentityManagement/certificate/TBRM9N1BQNX78TT5FP1PY787T82SGH2Z",
+          "documentHash" : "7ZQ7FDB5Y33RDTM061DVRHRGHXMF0AYAYMBR0FTDX7HA73TXLJAH"
+        }
+      }
+    },
+    {
+      "attributes" : {
+        "myLocation" : "http://foo.com/TokenManagement/token/9HD2J33QR3Z3RRGLC95FATNWF5LVLZPM",
+        "batchLocation" : "http://foo.com/TokenManagement/batch/R9R9A0PHK4K4MF0NX19BWDHAAP08PNGP",
+        "guarantorLocation" : "http://foo.com/IdentityManagement/identity/B941X8V0CDVWZKAYZNVL8SNFZMQGG9SF",
+        "accountantLocation" : "http://foo.com/IdentityManagement/identity/GAXT95J7N6STQDHCXVXFPXRXWHF1B7NR",
+        "tokenType" : "Star Bucks",
+        "watermark" : {
+          "hashingAlgorithm" : "SHA256",
+          "signingAlgorithm" : "SHA1withRSA",
+          "majorVersion" : 1,
+          "minorVersion" : 0,
+          "creationTimestamp" : "2015-10-01T16:09:48.581Z",
+          "expirationTimestamp" : "2016-09-30T16:09:48.581Z"
+        }
+      },
+      "guarantorSeal" : {
+        "timestamp" : "2015-10-01T16:09:48.591Z",
+        "documentType" : "Token Attributes",
+        "documentSignature" : "BH0JBRDWGKAP3RAPB6JT4YX3HTDW10HSB6M7Y38WQJSGQVAQB5HZDX7JYZZGFA9MMFB6612QZPD0KHTJR2LB04QM9G1LJXLZMH2XSD8YJYV0SXCN8VB0WRC4FP0R4Q7NRYDPB1RZ2RGNLHVNVTB3CXK9SH55XVJ624CZA04QB4236L4WSGKT2SWDRD51BNWJQLN5HV0WY5GDWKXVHSKG3FXBX065PFLLRDGPDTLTB1F0ZNXFHDWD4NSAGA8C9092WR1V0NKJ50BTT3MMMLQK1T092XXWV3CADL3WY0PDVRV98ZSP4FC9WBKKW11P5F2CW3P1GA2ZY2QZAN4D2P4BLJ3DAR04WTNGHY6K3GS2G4TWBJ7PNHXSZKPXXYQBVJW1XS8YG37X0K5CCDHLLLWWY5SR5H",
+        "verificationCitation" : {
+          "documentLocation" : "http://foo.com/IdentityManagement/certificate/TBRM9N1BQNX78TT5FP1PY787T82SGH2Z",
+          "documentHash" : "7ZQ7FDB5Y33RDTM061DVRHRGHXMF0AYAYMBR0FTDX7HA73TXLJAH"
+        }
+      }
+    },
+    {
+      "attributes" : {
+        "myLocation" : "http://foo.com/TokenManagement/token/CCTCNNRH9HBKJ9RVJJTR7S1ZV85GFDRQ",
+        "batchLocation" : "http://foo.com/TokenManagement/batch/R9R9A0PHK4K4MF0NX19BWDHAAP08PNGP",
+        "guarantorLocation" : "http://foo.com/IdentityManagement/identity/B941X8V0CDVWZKAYZNVL8SNFZMQGG9SF",
+        "accountantLocation" : "http://foo.com/IdentityManagement/identity/GAXT95J7N6STQDHCXVXFPXRXWHF1B7NR",
+        "tokenType" : "Star Bucks",
+        "watermark" : {
+          "hashingAlgorithm" : "SHA256",
+          "signingAlgorithm" : "SHA1withRSA",
+          "majorVersion" : 1,
+          "minorVersion" : 0,
+          "creationTimestamp" : "2015-10-01T16:09:48.591Z",
+          "expirationTimestamp" : "2016-09-30T16:09:48.591Z"
+        }
+      },
+      "guarantorSeal" : {
+        "timestamp" : "2015-10-01T16:09:48.600Z",
+        "documentType" : "Token Attributes",
+        "documentSignature" : "4YLBYSBD5WM1VM2SV2MTXKNH5JLX2J0RR2BH436Q08XXCSR08M74Z6AZBQVFJ5YA67VCGLM1LYQPC5W4CWHQVM05W4DHYGY62FSM08C94SK550RCWMVYJDQQSX90JVXVJXVF80RDLBLHAG4WRCP65872JTNMFH5ADZTNDFVNFT94XH92ZFH3N94HRH22QW4R0426YSZ7H7T0GX72W5LC3XRCD64PMKXVVM250JS3BSQYWKRJCQRQCMBYT3H5MYK3GYTFQHWK478QZRM1BBYKA5LSR53P222SWATK66A751JBQ0TVBZQZN1XMZRM91C44TBNVK8NL11DPW9CKFK63XG78S703C310FT7MDPGLZWJ8ACMPFA1MHD659V7JL7Q4ZGYJXMCGQ5SXR9KCMP8QSZYV14",
+        "verificationCitation" : {
+          "documentLocation" : "http://foo.com/IdentityManagement/certificate/TBRM9N1BQNX78TT5FP1PY787T82SGH2Z",
+          "documentHash" : "7ZQ7FDB5Y33RDTM061DVRHRGHXMF0AYAYMBR0FTDX7HA73TXLJAH"
+        }
+      }
+    },
+    {
+      "attributes" : {
+        "myLocation" : "http://foo.com/TokenManagement/token/0Q1N6CAHG6N8K9V0AY5D5Q1SLVZM3DFA",
+        "batchLocation" : "http://foo.com/TokenManagement/batch/R9R9A0PHK4K4MF0NX19BWDHAAP08PNGP",
+        "guarantorLocation" : "http://foo.com/IdentityManagement/identity/B941X8V0CDVWZKAYZNVL8SNFZMQGG9SF",
+        "accountantLocation" : "http://foo.com/IdentityManagement/identity/GAXT95J7N6STQDHCXVXFPXRXWHF1B7NR",
+        "tokenType" : "Star Bucks",
+        "watermark" : {
+          "hashingAlgorithm" : "SHA256",
+          "signingAlgorithm" : "SHA1withRSA",
+          "majorVersion" : 1,
+          "minorVersion" : 0,
+          "creationTimestamp" : "2015-10-01T16:09:48.600Z",
+          "expirationTimestamp" : "2016-09-30T16:09:48.600Z"
+        }
+      },
+      "guarantorSeal" : {
+        "timestamp" : "2015-10-01T16:09:48.609Z",
+        "documentType" : "Token Attributes",
+        "documentSignature" : "6H3V0T7XZNMTZBG0TFSCZYBP93ZPZDAHLK5X1J2BZS1B7AQ747KP0J64G4D0Y22AP0QYVAMTTWLC2CSCF01RGPLX54D8Z8VZS739HFFR0CKGGHHNJKW4VPNMLGFZLLT0CD9G2BHTZ7ZAF4D8JFSTQ30QJ1RG6GCXWHQA917WYBS2BC0714AHMLKJYL3KJVHMKBZCWG6J7LR99VWW5Y5VD516CSWAMT61NGRJ66BV841SSMZ8N6N3NQ61BX844NZZCR79HKKX02TB322HFSQJ9009XWASL7MJAZ0ST78J2WVYHTNT97GNGQCV8NTLLNPH1QWZY031JNN209CNJPSNDJTJC0V99H7JPLRMLTZFJ666V7NHS1P9NHPY5Y79KVSW7HFQN27FPS4D9QGGR463G2285W",
+        "verificationCitation" : {
+          "documentLocation" : "http://foo.com/IdentityManagement/certificate/TBRM9N1BQNX78TT5FP1PY787T82SGH2Z",
+          "documentHash" : "7ZQ7FDB5Y33RDTM061DVRHRGHXMF0AYAYMBR0FTDX7HA73TXLJAH"
+        }
+      }
+    },
+    {
+      "attributes" : {
+        "myLocation" : "http://foo.com/TokenManagement/token/5APNXWA5CV9L29XRA15970GPR11HZS3J",
+        "batchLocation" : "http://foo.com/TokenManagement/batch/R9R9A0PHK4K4MF0NX19BWDHAAP08PNGP",
+        "guarantorLocation" : "http://foo.com/IdentityManagement/identity/B941X8V0CDVWZKAYZNVL8SNFZMQGG9SF",
+        "accountantLocation" : "http://foo.com/IdentityManagement/identity/GAXT95J7N6STQDHCXVXFPXRXWHF1B7NR",
+        "tokenType" : "Star Bucks",
+        "watermark" : {
+          "hashingAlgorithm" : "SHA256",
+          "signingAlgorithm" : "SHA1withRSA",
+          "majorVersion" : 1,
+          "minorVersion" : 0,
+          "creationTimestamp" : "2015-10-01T16:09:48.609Z",
+          "expirationTimestamp" : "2016-09-30T16:09:48.609Z"
+        }
+      },
+      "guarantorSeal" : {
+        "timestamp" : "2015-10-01T16:09:48.618Z",
+        "documentType" : "Token Attributes",
+        "documentSignature" : "5KM9FWFNTJ0STS7T172TJ5VS3ADN503DRYT3VHB0S9B8P2L2ZVQGMDQ8XSNXDV0627FP6GBAKRQFZ4GDVR548H62S7JWJQSAVA35M4K8CKJV99909WK6JM3P6SM1FKBTKHVJ75SW8Z1KTVQT5XXLS23CMKWYW365DAJQQH0N7PR5PX079V1MGRKC4KV4RMFB9V3GBHYXCFJG1TDJNBG823CRBHJCX8BRHHXDRWW2JWB6DF0YRB048G4VGKM4VQV328RFTYWXXQK9VH95MVJ15GXGCCP31JFPT8Z7ZJ40M0FQMTBYXMM7GP166MD8X0ZL9GV9790W5DW8Z631VMSAQ9STZRWN7K933LMLF3GB6T6L7N7RPL9HDFPVQYDFZGFK052M90ZZ5DY01QPM6DAQ69XCFW",
+        "verificationCitation" : {
+          "documentLocation" : "http://foo.com/IdentityManagement/certificate/TBRM9N1BQNX78TT5FP1PY787T82SGH2Z",
+          "documentHash" : "7ZQ7FDB5Y33RDTM061DVRHRGHXMF0AYAYMBR0FTDX7HA73TXLJAH"
+        }
+      }
+    }
+  ]
+}
