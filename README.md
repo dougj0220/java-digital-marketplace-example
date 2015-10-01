@@ -1,4 +1,4 @@
-![Java Digital Marketplace Example](https://github.com/craterdog/java-digital-marketplace-example/blob/master/docs/images/marketplace.png)
+![Java Digital Marketplace Example](https://github.com/craterdog-crypto-payments/java-digital-marketplace-example/blob/master/docs/images/marketplace.png)
 
 ### Java Digital Marketplace Example
 This project uses the Java toolkits provided in the following projects to demonstrate how a
