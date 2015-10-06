@@ -77,7 +77,7 @@ functionality can be started locally (running at localhost:8080) by doing the fo
           } ]
         }
 
-    Notice that there is an identity with the _pseudonym_ "digital-accountant" that already exists in the identity store. This identity is used to _certify_ all digital tokens, transactions, and ledger entries.
+    Notice that there is an identity with the _pseudonym_ "digital-accountant" that already exists in the identity registry. This identity is used to _certify_ all digital tokens, transactions, and ledger entries.
 
 #### Running the Command Line Interface (CLI)
 A simple _command line interface_ (CLI) is provided to let you create new digital identities, tokens, and transactions.  Here is an example scenario to play around with:
@@ -116,7 +116,7 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
           "certificateLocation" : "http://localhost:8080/DigitalMarketplace/certificate/Z8Y3VN9PCFM5P7BQ96BY49VD2RR40VK8"
         }
 
-    This command created a new _private notary key_ for the merchant and published its corresponding _public certificate_ to the identity store managed by the digital marketplace web service.
+    This command created a new _private notary key_ for the merchant and published its corresponding _public certificate_ to the identity registry managed by the digital marketplace web service.
 
  1. Create a new digital identity for a consumer:
 
@@ -157,7 +157,7 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
           ]
         }
 
-    There are now 10 new _certified digital tokens_ in the token store managed by the digital marketplace web service.  The tokens are currently owned by the merchant "starbucks".
+    There are now 10 new _certified digital tokens_ in the digital bank managed by the digital marketplace web service.  The tokens are currently owned by the merchant "starbucks".
 
  1. Retrieve one of the new tokens:
 
