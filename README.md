@@ -32,7 +32,7 @@ functionality can be started locally (running at localhost:8080) by doing the fo
  1. Use the startup script to fire up the web service:
 
         $ scripts/startDigitalMarketplace
-        
+
           .   ____          _            __ _ _
          /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
         ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -40,11 +40,13 @@ functionality can be started locally (running at localhost:8080) by doing the fo
           '  |____| .__|_| |_|_| |_\__, | / / / /
          =========|_|==============|___/=/_/_/_/
          :: Spring Boot ::        (v1.2.3.RELEASE)
-        
+
         INFO Starting DigitalMarketplaceConfiguration with PID 8367 (java-digital-marketplace-example/java-digital-marketplace-web/target/java-digital-marketplace-web-1.0-SNAPSHOT-exec.jar started by craterdog in java-digital-marketplace-example)
         INFO Started DigitalMarketplaceConfiguration in 6.979 seconds (JVM running for 7.444)
-        
- 1. Open a new terminal window and list out the current list of known identities from the web service:
+
+    This window will log the _output_ for all requests to the digital marketplace web service. Keep it open so that you can watch it work.
+
+ 1. Open a _new_ terminal window and list out the current list of known identities from the web service:
 
         $ curl http://localhost:8080/DigitalMarketplace/identities/all
         {
@@ -75,9 +77,10 @@ functionality can be started locally (running at localhost:8080) by doing the fo
           } ]
         }
 
+    Notice that there is an identity with the _pseudonym_ "digital-accountant" that already exists in the identity store. This identity is used to _certify_ all digital tokens, transactions, and ledger entries.
+
 #### Running the Command Line Interface (CLI)
-A simple command line interface (CLI) is provided to let you create new digital identities,
-tokens, and transactions.  Here is an example scenario to play around with:
+A simple _command line interface_ (CLI) is provided to let you create new digital identities, tokens, and transactions.  Here is an example scenario to play around with:
  1. Fire up the command line interface:
 
         $ scripts/startCLI
@@ -95,15 +98,16 @@ tokens, and transactions.  Here is an example scenario to play around with:
           retrieve-transaction
           retrieve-ledger
           quit
-        
-        Enter command: 
+
+        Enter command:
+
+    This shows all the different commands that the CLI supports. Each interacts with the _digital marketplace web service_ to perform the desired action.
 
  1. Create a new digital identity for a merchant:
 
         Enter command: register-identity -pseudonym starbucks
-        
         Enter notary key password for the starbucks: SB
-        
+
         INFO Registering the new identity...
         INFO registerResponse: {
           "status" : "Succeeded",
@@ -112,12 +116,13 @@ tokens, and transactions.  Here is an example scenario to play around with:
           "certificateLocation" : "http://localhost:8080/DigitalMarketplace/certificate/Z8Y3VN9PCFM5P7BQ96BY49VD2RR40VK8"
         }
 
+    This command created a new _private notary key_ for the merchant and published its corresponding _public certificate_ to the identity store managed by the digital marketplace web service.
+
  1. Create a new digital identity for a consumer:
 
         Enter command: register-identity -pseudonym coffee-lover
-        
         Enter notary key password for the coffee-lover: CL
-        
+
         INFO Registering the new identity...
         INFO registerResponse: {
           "status" : "Succeeded",
@@ -126,12 +131,13 @@ tokens, and transactions.  Here is an example scenario to play around with:
           "certificateLocation" : "http://localhost:8080/DigitalMarketplace/certificate/VXJ8CL0FP9CPHP5BGWLSLMH3C9S1R5XJ"
         }
 
+    And this one did the same thing for the consumer. Each private notary key is _password_ protected, so each identity will need to provide their password to use it to _notarize_ a token or transaction.
+
  1. Create and certify 10 new "StarBucks" tokens:
 
         Enter command: certify-batch -merchant starbucks -accountant digital-accountant -type StarBucks -count 10
-        
         Enter notary key password for the starbucks: SB
-        
+
         INFO Sending the digital accountant a request to certify the new tokens...
         INFO certifyResponse: {
           "status" : "Succeeded",
@@ -151,10 +157,12 @@ tokens, and transactions.  Here is an example scenario to play around with:
           ]
         }
 
+    There are now 10 new _certified digital tokens_ in the token store managed by the digital marketplace web service.  The tokens are currently owned by the merchant "starbucks".
+
  1. Retrieve one of the new tokens:
 
         Enter command: retrieve-token -token GBGRS62FQ1Z2N491K5R24Y7HQVN9WKSY
-        
+
         INFO Retrieving the token...
         INFO retrieveResponse: {
           "status" : "Succeeded",
@@ -196,14 +204,14 @@ tokens, and transactions.  Here is an example scenario to play around with:
           }
         }
 
- 1. Transfer a StarBuck from the merchant to the consumer:
+    You can see that the new token has been notarized by _both_ the merchant and the digital accountant. This makes it _impossible_ for either one of them to modify the token without being detected.
+
+ 1. Transfer a _StarBuck_ from the merchant to the consumer:
 
         Enter command: transfer-token -sender starbucks -receiver coffee-lover -token GBGRS62FQ1Z2N491K5R24Y7HQVN9WKSY
-        
         Enter notary key password for the starbucks: SB
-        
         Enter notary key password for the coffee-lover: CL
-        
+
         INFO Transfering the token from the sender to the receiver...
         INFO Sending the digital accountant a request to certify the transaction...
         INFO recordResponse: {
@@ -212,10 +220,12 @@ tokens, and transactions.  Here is an example scenario to play around with:
           "transactionLocation" : "http://localhost:8080/DigitalMarketplace/transaction/MKYDHSCXZ7ZDL95FVGDTNFFDTCJ560RG"
         }
 
+    The consumer now owns this token and is the only identity that is allowed to spend it.
+
  1. View the ledger for the token:
 
         Enter command: retrieve-ledger -ledger GBGRS62FQ1Z2N491K5R24Y7HQVN9WKSY
-        
+
         INFO Retrieving the ledger...
         INFO retrieveResponse: {
           "status" : "Succeeded",
@@ -262,9 +272,10 @@ tokens, and transactions.  Here is an example scenario to play around with:
           ]
         }
 
+    Notice that there is only one ledger entry for this token and it shows that the merchant "starbucks" transfered ownership of the token to the consumer "coffee-lover" and both parties _notarized_ the transaction so neither party can later claim it didn't happen.
+
  1. Quit out of the command line interface:
 
         Enter command: quit
-        
-        Goodbye!
 
+        Goodbye!
