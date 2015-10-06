@@ -18,8 +18,11 @@ make requests on it using a simple command line interface (CLI).
 Before you can run anything you must build the digital marketplace project. Here are the steps to
 follow to do this:
  1. Checkout the project from the Crater Dog Technologies™ GitHub site:
+
         git clone https://github.com/craterdog-crypto-payments/java-digital-marketplace-example.git
+
  1. Build the project:
+
         cd java-digital-marketplace-example/
         mvn install
 
@@ -27,14 +30,18 @@ follow to do this:
 The digital marketplace web service that provides identity management and digital accounting
 functionality can be started locally (running at localhost:8080) by doing the following:
  1. Use the startup script to fire up the web service:
+
         scripts/startDigitalMarketplace
 
 #### Running the Command Line Interface (CLI)
 A simple command line interface (CLI) is provided to let you create new digital identities,
 tokens, and transactions.  Here is an example scenario to play around with:
  1. Fire up the command line interface _in a different terminal_:
+
         scripts/startCLI
+
  1. Create a new digital identity for a merchant:
+
         Enter command: register-identity -pseudonym StarBucks
         
         Enter notary key password for the StarBucks: SB
@@ -46,7 +53,9 @@ tokens, and transactions.  Here is an example scenario to play around with:
           "identityLocation" : "http://localhost:8080/DigitalMarketplace/identity/BR45NL6LZBQLR7C757FJ70WY4A9NMF9H",
           "certificateLocation" : "http://localhost:8080/DigitalMarketplace/certificate/99GVH6BVN7NALC6TD43MZDFHLHC72TK7"
         }
+
  1. Create a new digital identity for a consumer:
+
         Enter command: register-identity -pseudonym CoffeeLover
         
         Enter notary key password for the StarBucks: CL
@@ -58,7 +67,9 @@ tokens, and transactions.  Here is an example scenario to play around with:
           "identityLocation" : "http://localhost:8080/DigitalMarketplace/identity/WR8Y4TH34L7QLD9V8K241R64LBWFP1VR",
           "certificateLocation" : "http://localhost:8080/DigitalMarketplace/certificate/0W6KX4V0ZT53D9KAGQ9XBKJ0S6MY5D7D"
         }
+
  1. Create and certify 10 new "StarBucks" tokens:
+
         Enter command: certify-batch -merchant StarBucks -accountant digital-accountant -type StarBucks -count 10
         
         Enter notary key password for the StarBucks: SB
@@ -81,7 +92,9 @@ tokens, and transactions.  Here is an example scenario to play around with:
             "http://localhost:8080/DigitalMarketplace/token/S4K227F9S79HWLDP5LWDF372S5NWNVDL"
           ]
         }
+
  1. Transfer a StarBuck from the merchant to the consumer:
+
         Enter command: transfer-token -sender StarBucks -receiver CoffeeLover -token XGT91KCT2ZYLF41M4P2SXCJGHF7Q4WA6
         
         Enter notary key password for the StarBucks: SB
@@ -95,7 +108,9 @@ tokens, and transactions.  Here is an example scenario to play around with:
           "reason" : "Created",
           "transactionLocation" : "http://localhost:8080/DigitalMarketplace/transaction/C1YMK5GTNWYP6RBM6LD82KTSG609CVGN"
         }
+
  1. View the ledger for the token:
+
         Enter command: retrieve-ledger -ledger XGT91KCT2ZYLF41M4P2SXCJGHF7Q4WA6
         
         INFO Retrieving the ledger...
