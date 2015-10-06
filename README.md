@@ -107,7 +107,6 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
 
         Enter command: register-identity -pseudonym starbucks
         Enter notary key password for the starbucks: SB
-
         INFO Registering the new identity...
         INFO registerResponse: {
           "status" : "Succeeded",
@@ -122,7 +121,6 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
 
         Enter command: register-identity -pseudonym coffee-lover
         Enter notary key password for the coffee-lover: CL
-
         INFO Registering the new identity...
         INFO registerResponse: {
           "status" : "Succeeded",
@@ -137,7 +135,6 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
 
         Enter command: certify-batch -merchant starbucks -accountant digital-accountant -type StarBucks -count 10
         Enter notary key password for the starbucks: SB
-
         INFO Sending the digital accountant a request to certify the new tokens...
         INFO certifyResponse: {
           "status" : "Succeeded",
@@ -162,7 +159,6 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
  1. Retrieve one of the new tokens:
 
         Enter command: retrieve-token -token GBGRS62FQ1Z2N491K5R24Y7HQVN9WKSY
-
         INFO Retrieving the token...
         INFO retrieveResponse: {
           "status" : "Succeeded",
@@ -211,7 +207,6 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
         Enter command: transfer-token -sender starbucks -receiver coffee-lover -token GBGRS62FQ1Z2N491K5R24Y7HQVN9WKSY
         Enter notary key password for the starbucks: SB
         Enter notary key password for the coffee-lover: CL
-
         INFO Transfering the token from the sender to the receiver...
         INFO Sending the digital accountant a request to certify the transaction...
         INFO recordResponse: {
@@ -225,7 +220,6 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
  1. View the ledger for the token:
 
         Enter command: retrieve-ledger -ledger GBGRS62FQ1Z2N491K5R24Y7HQVN9WKSY
-
         INFO Retrieving the ledger...
         INFO retrieveResponse: {
           "status" : "Succeeded",
@@ -277,5 +271,5 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
  1. Quit out of the command line interface:
 
         Enter command: quit
-
         Goodbye!
+

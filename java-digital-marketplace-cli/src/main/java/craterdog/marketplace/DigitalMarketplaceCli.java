@@ -193,7 +193,6 @@ public class DigitalMarketplaceCli {
                 logger.error("Unable to read the command from standard input: {}", e);
                 return 1;
             }
-            writer.format("%n");
 
             String[] values = line.split("\\s");
             if (values.length == 0) {
@@ -205,6 +204,10 @@ public class DigitalMarketplaceCli {
             Options options = new Options();
             try {
                 switch (command) {
+
+                    case "":
+                        if (console != null) printCommands();
+                        break;
 
                     case "register-identity":
                         registerIdentity(options, values);
@@ -264,7 +267,7 @@ public class DigitalMarketplaceCli {
                 }
 
             } catch (ParseException e) {
-                printHelp(command, options);
+                if (console != null) printHelp(command, options);
             } catch (IOException | ResourceAccessException e) {
                 logger.error("There was a problem processing the command: {}", e);
             }
