@@ -210,7 +210,7 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
             },
             "accountantSeal" : {
               "attributes" : {
-                "documentType" : "Guarantor Seal",
+                "documentType" : "Guarantor Signature",
                 "documentHash" : "179XXHV549X82770KF6RAAHTSBMQVW5FKG6WQ6GD5H6DKZR870LH",
                 "watermark" : {
                   "hashingAlgorithm" : "SHA256",
@@ -295,7 +295,7 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
               },
               "receiverSeal" : {
                 "attributes" : {
-                  "documentType" : "Sender Seal",
+                  "documentType" : "Sender Signature",
                   "documentHash" : "RMT7HQ5VCRYALS7ZCJ7ZL16SP423WRQDM8CPVAJMAZQF0N3CM2G0",
                   "watermark" : {
                     "hashingAlgorithm" : "SHA256",
