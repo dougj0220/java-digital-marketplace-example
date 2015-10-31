@@ -307,7 +307,7 @@ public final class IdentityManagementService implements IdentityManagement {
             NotaryCertificate previousCertificate = null;
             if (newCertificate.certificationSeal != null) {
                 logger.debug("Retrieving the previous certificate from the database...");
-                URI previousCertificateLocation = newCertificate.certificationSeal.verificationCitation.documentLocation;
+                URI previousCertificateLocation = newCertificate.certificationSeal.attributes.verificationCitation.documentLocation;
                 previousCertificate = storageProvider.retrieveCertificate(previousCertificateLocation);
             }
             Map<String, Object> errors = new LinkedHashMap<>();

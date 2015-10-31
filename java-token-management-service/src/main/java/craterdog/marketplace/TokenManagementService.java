@@ -107,7 +107,7 @@ public final class TokenManagementService implements TokenManagement {
                 logger.debug("Certifying the tokens...");
                 List<URI> tokenLocations = new ArrayList<>();
                 for (DigitalToken token : tokens) {
-                    DocumentCitation guarantorCitation = token.guarantorSeal.verificationCitation;
+                    DocumentCitation guarantorCitation = token.guarantorSeal.attributes.verificationCitation;
                     URI certificateLocation = guarantorCitation.documentLocation;
                     RetrieveCertificateResponse retrieveResponse = identityManager.retrieveCertificate(certificateLocation);
                     NotaryCertificate guarantorCertificate = retrieveResponse.certificate;
@@ -256,7 +256,7 @@ public final class TokenManagementService implements TokenManagement {
                 notarizationProvider.validateDocumentCitation(tokenCitation, document, errors);
 
                 logger.debug("Retrieving the guarantor certificate...");
-                DocumentCitation guarantorCitation = token.guarantorSeal.verificationCitation;
+                DocumentCitation guarantorCitation = token.guarantorSeal.attributes.verificationCitation;
                 URI guarantorLocation = guarantorCitation.documentLocation;
                 RetrieveCertificateResponse retrieveResponse = identityManager.retrieveCertificate(guarantorLocation);
                 NotaryCertificate guarantorCertificate = retrieveResponse.certificate;
@@ -269,7 +269,7 @@ public final class TokenManagementService implements TokenManagement {
                 }
 
                 logger.debug("Retrieving the accountant certificate...");
-                DocumentCitation accountantCitation = token.accountantSeal.verificationCitation;
+                DocumentCitation accountantCitation = token.accountantSeal.attributes.verificationCitation;
                 URI certificateLocation = accountantCitation.documentLocation;
                 retrieveResponse = identityManager.retrieveCertificate(certificateLocation);
                 NotaryCertificate accountantCertificate = retrieveResponse.certificate;
@@ -282,7 +282,7 @@ public final class TokenManagementService implements TokenManagement {
                 }
 
                 logger.debug("Retrieving the sender certificate...");
-                DocumentCitation senderCitation = transaction.senderSeal.verificationCitation;
+                DocumentCitation senderCitation = transaction.senderSeal.attributes.verificationCitation;
                 certificateLocation = senderCitation.documentLocation;
                 retrieveResponse = identityManager.retrieveCertificate(certificateLocation);
                 NotaryCertificate senderCertificate = retrieveResponse.certificate;
@@ -295,7 +295,7 @@ public final class TokenManagementService implements TokenManagement {
                 }
 
                 logger.debug("Retrieving the receiver certificate...");
-                DocumentCitation receiverCitation = transaction.receiverSeal.verificationCitation;
+                DocumentCitation receiverCitation = transaction.receiverSeal.attributes.verificationCitation;
                 certificateLocation = receiverCitation.documentLocation;
                 retrieveResponse = identityManager.retrieveCertificate(certificateLocation);
                 NotaryCertificate receiverCertificate = retrieveResponse.certificate;
@@ -310,7 +310,7 @@ public final class TokenManagementService implements TokenManagement {
                 NotaryCertificate escrowCertificate = null;
                 if (request.transaction.attributes.escrowLocation != null) {
                     logger.debug("Retrieving the escrow certificate...");
-                    DocumentCitation escrowCitation = transaction.escrowSeal.verificationCitation;
+                    DocumentCitation escrowCitation = transaction.escrowSeal.attributes.verificationCitation;
                     certificateLocation = escrowCitation.documentLocation;
                     retrieveResponse = identityManager.retrieveCertificate(certificateLocation);
                     escrowCertificate = retrieveResponse.certificate;

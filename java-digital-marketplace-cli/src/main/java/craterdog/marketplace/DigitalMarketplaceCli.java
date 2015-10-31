@@ -574,7 +574,7 @@ public class DigitalMarketplaceCli {
         logger.info("Transfering the token from the sender to the receiver...");
         URI transactionLocation = URI.create(digitalMarketplaceUri + "/transaction/" + new Tag());
         DigitalTransaction transaction = accountingProvider.initiateTransaction(transactionLocation, senderLocation, receiverLocation, "Token Transfer", token, senderKey);
-        URI certificateLocation = transaction.senderSeal.verificationCitation.documentLocation;
+        URI certificateLocation = transaction.senderSeal.attributes.verificationCitation.documentLocation;
         RetrieveCertificateResponse retrieveCertificateResponse = digitalMarketplaceClient.retrieveCertificate(certificateLocation);
         if (retrieveCertificateResponse.status != RequestStatus.Succeeded) {
             logger.error("Attempt to retrieve sender certificate failed: {}", retrieveCertificateResponse);
