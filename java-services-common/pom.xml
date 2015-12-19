@@ -15,7 +15,7 @@
     <parent>
         <groupId>com.craterdog.maven-parent-poms</groupId>
         <artifactId>java-component</artifactId>
-        <version>3.16</version>
+        <version>3.17</version>
         <relativePath />
     </parent>
 
@@ -50,7 +50,7 @@
     </developers>
 
     <properties>
-        <java-smart-objects-version>3.9</java-smart-objects-version>
+        <java-smart-objects-version>3.13</java-smart-objects-version>
     </properties>
 
     <dependencies>

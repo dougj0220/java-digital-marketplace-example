@@ -15,7 +15,7 @@
     <parent>
         <groupId>com.craterdog.maven-parent-poms</groupId>
         <artifactId>java-component</artifactId>
-        <version>3.16</version>
+        <version>3.17</version>
         <relativePath />
     </parent>
 
@@ -50,10 +50,10 @@
     </developers>
 
     <properties>
-        <java-digital-notary-version>1.4</java-digital-notary-version>
-        <java-digital-identities-version>1.3</java-digital-identities-version>
-        <java-digital-tokens-version>1.3</java-digital-tokens-version>
-        <java-digital-accounting-version>1.3</java-digital-accounting-version>
+        <java-digital-notary-version>1.5</java-digital-notary-version>
+        <java-digital-identities-version>1.4</java-digital-identities-version>
+        <java-digital-tokens-version>1.4</java-digital-tokens-version>
+        <java-digital-accounting-version>1.5</java-digital-accounting-version>
     </properties>
 
     <dependencies>

@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import craterdog.identities.DigitalIdentity;
 import craterdog.notary.NotaryCertificate;
 import craterdog.notary.mappers.NotaryModule;
-import craterdog.smart.SmartObjectMapper;
+import craterdog.smart.SmartObject;
 import craterdog.tokens.DigitalToken;
 import java.net.URI;
 import java.util.LinkedHashMap;
@@ -41,7 +41,7 @@ public final class DigitalMarketplaceClient implements IdentityManagement, Token
 
 
     static {
-        ObjectMapper mapper = new SmartObjectMapper();
+        ObjectMapper mapper = SmartObject.createMapper();
         // handle conversion of public keys in certificates
         mapper.registerModule(new NotaryModule());
         restTemplate.getMessageConverters().add(0, new MappingJackson2HttpMessageConverter(mapper));

@@ -21,7 +21,7 @@ import craterdog.notary.NotaryCertificate;
 import craterdog.notary.NotaryKey;
 import craterdog.notary.V1NotarizationProvider;
 import craterdog.primitives.Tag;
-import craterdog.smart.SmartObjectMapper;
+import craterdog.smart.SmartObject;
 import craterdog.tokens.DigitalToken;
 import craterdog.tokens.Tokenization;
 import craterdog.tokens.V1TokenizationProvider;
@@ -61,7 +61,7 @@ public class DigitalMarketplaceCli {
     static private final XLogger logger = XLoggerFactory.getXLogger(DigitalMarketplaceCli.class);
     static private final String defaultDigitalAccountantUri = "http://localhost:8080/DigitalMarketplace";
     static private final String dataDirectory = System.getProperty("user.home") + "/.cdt";
-    static private final ObjectMapper mapper = new SmartObjectMapper();
+    static private final ObjectMapper mapper = SmartObject.createMapper();
 
     static private final String[] commands = {
         "register-identity",

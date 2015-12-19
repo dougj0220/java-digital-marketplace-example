@@ -5,7 +5,7 @@ import craterdog.notary.Notarization;
 import craterdog.notary.NotaryKey;
 import craterdog.notary.V1NotarizationProvider;
 import craterdog.notary.mappers.NotaryModule;
-import craterdog.smart.SmartObjectMapper;
+import craterdog.smart.SmartObject;
 import java.net.URI;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -27,9 +27,8 @@ public class DigitalMarketplaceConfiguration {
     @Bean
     @Primary
     public ObjectMapper getObjectMapper() {
-        SmartObjectMapper mapper = new SmartObjectMapper();
         // handle conversion of public keys in certificates
-        mapper.registerModule(new NotaryModule());
+        ObjectMapper mapper = SmartObject.createMapper(new NotaryModule());
         return mapper;
     }
 
