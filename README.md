@@ -56,8 +56,8 @@ functionality can be started locally (running at localhost:8080) by doing the fo
             "attributes" : {
               "myLocation" : "http://localhost:8080/DigitalMarketplace/identity/X7928W3YJT1BNF9W2NVB8TH54ZM31WGR",
               "watermark" : {
-                "hashingAlgorithm" : "SHA256",
-                "signingAlgorithm" : "SHA1withRSA",
+                "hashingAlgorithm" : "SHA-256",
+                "signingAlgorithm" : "SHA256withRSA",
                 "majorVersion" : 1,
                 "minorVersion" : 0,
                 "creationTimestamp" : "2015-10-31T02:05:44.970Z",
@@ -70,8 +70,8 @@ functionality can be started locally (running at localhost:8080) by doing the fo
                 "documentType" : "Identity Attributes",
                 "documentHash" : "P8B0MS9PZ5C8ZLZ2MAB0AJ7A1TLB0TNB0T27WWLY443SB8SZZVW0",
                 "watermark" : {
-                  "hashingAlgorithm" : "SHA256",
-                  "signingAlgorithm" : "SHA1withRSA",
+                  "hashingAlgorithm" : "SHA-256",
+                  "signingAlgorithm" : "SHA256withRSA",
                   "majorVersion" : 1,
                   "minorVersion" : 0,
                   "creationTimestamp" : "2015-10-31T02:05:44.973Z",
@@ -181,8 +181,8 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
               "accountantLocation" : "http://localhost:8080/DigitalMarketplace/identity/X7928W3YJT1BNF9W2NVB8TH54ZM31WGR",
               "tokenType" : "StarBucks",
               "watermark" : {
-                "hashingAlgorithm" : "SHA256",
-                "signingAlgorithm" : "SHA1withRSA",
+                "hashingAlgorithm" : "SHA-256",
+                "signingAlgorithm" : "SHA256withRSA",
                 "majorVersion" : 1,
                 "minorVersion" : 0,
                 "creationTimestamp" : "2015-10-31T02:11:04.552Z",
@@ -194,8 +194,8 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
                 "documentType" : "Token Attributes",
                 "documentHash" : "BCY2F5RD7N1S2ANN8802M8780QJ7ACT7XJ75H5QBT0JKJ2PNAHH0",
                 "watermark" : {
-                  "hashingAlgorithm" : "SHA256",
-                  "signingAlgorithm" : "SHA1withRSA",
+                  "hashingAlgorithm" : "SHA-256",
+                  "signingAlgorithm" : "SHA256withRSA",
                   "majorVersion" : 1,
                   "minorVersion" : 0,
                   "creationTimestamp" : "2015-10-31T02:11:04.554Z",
@@ -213,8 +213,8 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
                 "documentType" : "Guarantor Signature",
                 "documentHash" : "179XXHV549X82770KF6RAAHTSBMQVW5FKG6WQ6GD5H6DKZR870LH",
                 "watermark" : {
-                  "hashingAlgorithm" : "SHA256",
-                  "signingAlgorithm" : "SHA1withRSA",
+                  "hashingAlgorithm" : "SHA-256",
+                  "signingAlgorithm" : "SHA256withRSA",
                   "majorVersion" : 1,
                   "minorVersion" : 0,
                   "creationTimestamp" : "2015-10-31T02:11:04.776Z",
@@ -266,8 +266,8 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
                   "documentHash" : "WTAJAGYM3WL8ATVKS6LYXHJ30R6NYLS19V0HYPKBFZ4KPXNP5SZ0"
                 },
                 "watermark" : {
-                  "hashingAlgorithm" : "SHA256",
-                  "signingAlgorithm" : "SHA1withRSA",
+                  "hashingAlgorithm" : "SHA-256",
+                  "signingAlgorithm" : "SHA256withRSA",
                   "majorVersion" : 1,
                   "minorVersion" : 0,
                   "creationTimestamp" : "2015-10-31T02:15:11.961Z",
@@ -279,8 +279,8 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
                   "documentType" : "Transaction Attributes",
                   "documentHash" : "FZB15KBT9F0J9S8B4JTKCSQ7Y0SV6R3C4YJDGR892V05DLMQF2LH",
                   "watermark" : {
-                    "hashingAlgorithm" : "SHA256",
-                    "signingAlgorithm" : "SHA1withRSA",
+                    "hashingAlgorithm" : "SHA-256",
+                    "signingAlgorithm" : "SHA256withRSA",
                     "majorVersion" : 1,
                     "minorVersion" : 0,
                     "creationTimestamp" : "2015-10-31T02:15:11.965Z",
@@ -298,8 +298,8 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
                   "documentType" : "Sender Signature",
                   "documentHash" : "RMT7HQ5VCRYALS7ZCJ7ZL16SP423WRQDM8CPVAJMAZQF0N3CM2G0",
                   "watermark" : {
-                    "hashingAlgorithm" : "SHA256",
-                    "signingAlgorithm" : "SHA1withRSA",
+                    "hashingAlgorithm" : "SHA-256",
+                    "signingAlgorithm" : "SHA256withRSA",
                     "majorVersion" : 1,
                     "minorVersion" : 0,
                     "creationTimestamp" : "2015-10-31T02:15:12.006Z",
