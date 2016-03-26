@@ -52,39 +52,41 @@ functionality can be started locally (running at localhost:8080) by doing the fo
         {
           "status" : "Succeeded",
           "reason" : "OK",
-          "identities" : [ {
-            "attributes" : {
-              "myLocation" : "http://localhost:8080/DigitalMarketplace/identity/X7928W3YJT1BNF9W2NVB8TH54ZM31WGR",
-              "watermark" : {
-                "hashingAlgorithm" : "SHA-256",
-                "signingAlgorithm" : "SHA256withRSA",
-                "majorVersion" : 1,
-                "minorVersion" : 0,
-                "creationTimestamp" : "2015-10-31T02:05:44.970Z",
-                "expirationTimestamp" : "2083-11-18T05:19:51.970Z"
-              },
-              "pseudonym" : "digital-accountant"
-            },
-            "identitySeal" : {
+          "identities" : [
+            {
               "attributes" : {
-                "documentType" : "Identity Attributes",
-                "documentHash" : "P8B0MS9PZ5C8ZLZ2MAB0AJ7A1TLB0TNB0T27WWLY443SB8SZZVW0",
+                "myLocation" : "http://localhost:8080/DigitalMarketplace/identity/7CB0R83LMLWGG4FZF9KLW8RVWGA10G0Y",
                 "watermark" : {
                   "hashingAlgorithm" : "SHA-256",
                   "signingAlgorithm" : "SHA256withRSA",
                   "majorVersion" : 1,
                   "minorVersion" : 0,
-                  "creationTimestamp" : "2015-10-31T02:05:44.973Z",
-                  "expirationTimestamp" : "2083-11-18T05:19:51.973Z"
+                  "creationTimestamp" : "2016-03-26T15:51:02.454Z",
+                  "expirationTimestamp" : "2084-04-13T19:05:09.454Z"
                 },
-                "verificationCitation" : {
-                  "documentLocation" : "http://localhost:8080/DigitalMarketplace/certificate/CJ2KKVT638YH98TNM70MP7BWVQ22FV28",
-                  "documentHash" : "TRGBC9ZH1Y6VJQ8YZG8VDYJHZMN7P3HRW91W4DK90CNT19GPKQD0"
-                }
+                "pseudonym" : "digital-accountant"
               },
-              "selfSignature" : "9NBMM79X4QV81YASXA7SQQAYZ9VAVR69CYGCLG0A7RPT8NK99VGGDMNAK5B1L9282YNCD3BRLAJZGN1N19MH57BHNBHBSGK9KFSYLJ7GKLT9JJQ31A5ZW4KZAPHDJZV3RBJA5B549LY8KGRXAX8FCJCCCJ4GP79C3MY81GSVDKBZV0MG4HZS1NH7ZD37J5ALSAFMVX8TAJAMMHA76C51K6LQX401FB7RRB180MPMMP600NM36CL8A14MNQF7C5YK6JJN3WDJFZGTB2SC8H2XRB1AQYM6MYY7CMFY6KXWLVHLR54VD9C5N4QRLHZLBLLYH7CSX2WPFNN4MGNHJVBKFTJQV3Y4WGNNWL1AGV2DT0ZQ140NXH21SFWJ7ZKVWX01P9XW2YJL75SJFMYFTSYCDLC6H8"
+              "identitySeal" : {
+                "attributes" : {
+                  "documentType" : "Identity Attributes",
+                  "documentHash" : "FKM1WHY4ASY4MB97GR4Q8DWPX3WDFTVS5BAR2WW2V5V844S1R2RH",
+                  "watermark" : {
+                    "hashingAlgorithm" : "SHA-256",
+                    "signingAlgorithm" : "SHA256withRSA",
+                    "majorVersion" : 1,
+                    "minorVersion" : 0,
+                    "creationTimestamp" : "2016-03-26T15:51:02.456Z",
+                    "expirationTimestamp" : "2084-04-13T19:05:09.456Z"
+                  },
+                  "verificationCitation" : {
+                    "documentLocation" : "http://localhost:8080/DigitalMarketplace/certificate/Z5BHVYN0W00HVXSLG276SFA6DHB5CM7S",
+                    "documentHash" : "XL16DA8N8V0BVGYG299WP117A9RW2VW8XDF2H7DQCXB9C2363RR0"
+                  }
+                },
+                "selfSignature" : "C6R4YNFZVWX1QACDWQ6GRT5KCD7SHJVWDBQ63PZ0QQV5WT71XMXT5VJ4MYVKYKA0VAD9PPKBQ7255Z9HPCBA7AF115S67Z60ZHGGYNY2F1FABPHD61FBHNMLNMSMWK65XM5P8NT0KBMG0GVDFK5L1L35PXG1H95P3YAVKR604772H8MA2G8ND1QPFVNQSX50M9WQ104FX0WCMN2PRAJ173PD6WFH885DVD889BR7Q9S08600Q07ZD7BAKPSV4TLGCR11F203TT44VWJ0SZ453L70NK1F4WZLWMRGM2FBRK6RJP09BA2QSG9W9PJ0N6D6D6C91247K0KN9797G830PQ2667GWR7Z6GD34JGQBF2XP4JXAVCJT38MGD1C7M4ABAHHDQFH93X157N62HK6YKW0678"
+              }
             }
-          } ]
+          ]
         }
 
     Notice that there is an identity with the _pseudonym_ "digital-accountant" that already exists in the identity registry. This identity is used to _certify_ all digital tokens, transactions, and ledger entries.
@@ -117,12 +119,11 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
 
         Enter command: register-identity -pseudonym starbucks
         Enter notary key password for the starbucks: SB
-        INFO Registering the new identity...
         INFO registerResponse: {
           "status" : "Succeeded",
           "reason" : "Created",
-          "identityLocation" : "http://localhost:8080/DigitalMarketplace/identity/95GTB3VYDS5GTRHCZ86FPV4734HRF54R",
-          "certificateLocation" : "http://localhost:8080/DigitalMarketplace/certificate/F2Y3QX8YWM69NFC2JKDXCB69TAR8M2K1"
+          "identityLocation" : "http://localhost:8080/DigitalMarketplace/identity/479VC9FTZXTR5X7TBLFV3BVLN4TF5ZHP",
+          "certificateLocation" : "http://localhost:8080/DigitalMarketplace/certificate/LS5DS396212F1ZFWHJ07JVTK0NJ5TSQN"
         }
 
     This command created a new _private notary key_ for the merchant and published its corresponding _public certificate_ to the identity registry managed by the digital marketplace web service.
@@ -135,8 +136,8 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
         INFO registerResponse: {
           "status" : "Succeeded",
           "reason" : "Created",
-          "identityLocation" : "http://localhost:8080/DigitalMarketplace/identity/8CFCWKFLJKGCZZ0S6KT0TWYVKXC1RX2B",
-          "certificateLocation" : "http://localhost:8080/DigitalMarketplace/certificate/K0F71VDK9RCCP5Y93220696T4WJ5Q06S"
+          "identityLocation" : "http://localhost:8080/DigitalMarketplace/identity/F6P7WC61VA15ZA6FTG3FDPGW3BNQZ0N2",
+          "certificateLocation" : "http://localhost:8080/DigitalMarketplace/certificate/AAGLBR6ZH9QGCRVMHZRGY6052C5YV93X"
         }
 
     And this one did the same thing for the consumer. Each private notary key is _password_ protected, so each identity will need to provide their password to use it to _notarize_ a token or transaction.
@@ -149,18 +150,18 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
         INFO certifyResponse: {
           "status" : "Succeeded",
           "reason" : "Created",
-          "batchLocation" : "http://localhost:8080/DigitalMarketplace/batch/SQF7M5X8D7QFTP28HS4YFAV2Y3L0MSYS",
+          "batchLocation" : "http://localhost:8080/DigitalMarketplace/batch/05PBK4P3QD11TG4RJ4LXGRTXNTY99PXQ",
           "tokenLocations" : [
-            "http://localhost:8080/DigitalMarketplace/token/Z7J78ATLC9L5CGVKRW3ZYJY5DMFJSCGM",
-            "http://localhost:8080/DigitalMarketplace/token/AYRKTZX71N9WL982PA7NL2VNXKTRVSS2",
-            "http://localhost:8080/DigitalMarketplace/token/49ZBWZP80BBN6B70QNTSV6QA2QX1K730",
-            "http://localhost:8080/DigitalMarketplace/token/31GSQ79YSTQ68Z2HFF0DM6J7PVQ4QFJ2",
-            "http://localhost:8080/DigitalMarketplace/token/Q9396Z92AA9DM41CFNT14DDQYKVXDZB8",
-            "http://localhost:8080/DigitalMarketplace/token/QX8HDP5LADTR8DBPX39CKVNV5XGV82V9",
-            "http://localhost:8080/DigitalMarketplace/token/FD62011HRVG1RD7XLXPMTQZ5VPQLZSB8",
-            "http://localhost:8080/DigitalMarketplace/token/BZVT47Y3B2FGK5KVC0DPSHVF851DAGBG",
-            "http://localhost:8080/DigitalMarketplace/token/P76FYS6FFFZAZD9LRPHDH6M48LNBYMPZ",
-            "http://localhost:8080/DigitalMarketplace/token/L2RX584VL1KCPWFKHZHJWN7FPG0PJP02"
+            "http://localhost:8080/DigitalMarketplace/token/ZN0Z1DTZMZK9HZP6K89X4SP5RC603SD0",
+            "http://localhost:8080/DigitalMarketplace/token/83WRZHDKCDGDXAH3RCWX0GWSJ5CPRWPW",
+            "http://localhost:8080/DigitalMarketplace/token/MM2SC8MS60GBKV57YYC5YNA5QBTHBPPV",
+            "http://localhost:8080/DigitalMarketplace/token/7S3WV18GRL9JV6H04FF83CKB3ARY06PT",
+            "http://localhost:8080/DigitalMarketplace/token/C275C6XXD6MC51H5AMCLQ499DCG3KDRW",
+            "http://localhost:8080/DigitalMarketplace/token/P1459ZGXD4AK35J5K3VR27G4S6Y3A2XN",
+            "http://localhost:8080/DigitalMarketplace/token/L5K5R30ARBKTW8F321TPH3DVPJ067CJD",
+            "http://localhost:8080/DigitalMarketplace/token/2FY2FS6GN85ZGZA1TZTVNBPKF3848HCX",
+            "http://localhost:8080/DigitalMarketplace/token/S17K2TW3A0AB1MBBX8GLYB3AM7BC4RHS",
+            "http://localhost:8080/DigitalMarketplace/token/YFNHDCVKL4N46Z7WNMS30ZJ5ALPAGPH6"
           ]
         }
 
@@ -168,64 +169,64 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
 
  1. Retrieve one of the new tokens:
 
-        Enter command: retrieve-token -token Z7J78ATLC9L5CGVKRW3ZYJY5DMFJSCGM
+        Enter command: retrieve-token -token ZN0Z1DTZMZK9HZP6K89X4SP5RC603SD0
         INFO Retrieving the token...
         INFO retrieveResponse: {
           "status" : "Succeeded",
           "reason" : "OK",
           "token" : {
             "attributes" : {
-              "myLocation" : "http://localhost:8080/DigitalMarketplace/token/Z7J78ATLC9L5CGVKRW3ZYJY5DMFJSCGM",
-              "batchLocation" : "http://localhost:8080/DigitalMarketplace/batch/SQF7M5X8D7QFTP28HS4YFAV2Y3L0MSYS",
-              "guarantorLocation" : "http://localhost:8080/DigitalMarketplace/identity/95GTB3VYDS5GTRHCZ86FPV4734HRF54R",
-              "accountantLocation" : "http://localhost:8080/DigitalMarketplace/identity/X7928W3YJT1BNF9W2NVB8TH54ZM31WGR",
+              "myLocation" : "http://localhost:8080/DigitalMarketplace/token/ZN0Z1DTZMZK9HZP6K89X4SP5RC603SD0",
+              "batchLocation" : "http://localhost:8080/DigitalMarketplace/batch/05PBK4P3QD11TG4RJ4LXGRTXNTY99PXQ",
+              "guarantorLocation" : "http://localhost:8080/DigitalMarketplace/identity/479VC9FTZXTR5X7TBLFV3BVLN4TF5ZHP",
+              "accountantLocation" : "http://localhost:8080/DigitalMarketplace/identity/7CB0R83LMLWGG4FZF9KLW8RVWGA10G0Y",
               "tokenType" : "StarBucks",
               "watermark" : {
                 "hashingAlgorithm" : "SHA-256",
                 "signingAlgorithm" : "SHA256withRSA",
                 "majorVersion" : 1,
                 "minorVersion" : 0,
-                "creationTimestamp" : "2015-10-31T02:11:04.552Z",
-                "expirationTimestamp" : "2016-10-30T02:11:04.552Z"
+                "creationTimestamp" : "2016-03-26T15:59:23.885Z",
+                "expirationTimestamp" : "2017-03-26T15:59:23.885Z"
               }
             },
             "guarantorSeal" : {
               "attributes" : {
                 "documentType" : "Token Attributes",
-                "documentHash" : "BCY2F5RD7N1S2ANN8802M8780QJ7ACT7XJ75H5QBT0JKJ2PNAHH0",
+                "documentHash" : "AVMK3TNHGKSC0MJX0BZ7VL4WBSNY6GS846GTLC6SNXYLGQ8F5XW0",
                 "watermark" : {
                   "hashingAlgorithm" : "SHA-256",
                   "signingAlgorithm" : "SHA256withRSA",
                   "majorVersion" : 1,
                   "minorVersion" : 0,
-                  "creationTimestamp" : "2015-10-31T02:11:04.554Z",
-                  "expirationTimestamp" : "2083-11-18T05:25:11.554Z"
+                  "creationTimestamp" : "2016-03-26T15:59:23.888Z",
+                  "expirationTimestamp" : "2084-04-13T19:13:30.888Z"
                 },
                 "verificationCitation" : {
-                  "documentLocation" : "http://localhost:8080/DigitalMarketplace/certificate/F2Y3QX8YWM69NFC2JKDXCB69TAR8M2K1",
-                  "documentHash" : "80DT1BL54M360Y68M6HBNGXZWR7Q3AKCCY0HWNCQVA47HF438F8H"
+                  "documentLocation" : "http://localhost:8080/DigitalMarketplace/certificate/LS5DS396212F1ZFWHJ07JVTK0NJ5TSQN",
+                  "documentHash" : "AB39B2Y9W5DVMX2B4CG9L49HD485DYMNMABNFJ23M94ZKWPNK33H"
                 }
               },
-              "selfSignature" : "5JQHQ3MS0341BL8NA8HFZV7M1KYJSC3Y883XH4STPQC8R4XB136NM55Z8CM30ABBK974C9P6BBP6RRBYXT61YZYBT5N2W6M7AWA20CTJN9302Q8DLX2JTJ7PN8XWF7S36X3LGTQK4RT5MKT84F8208CAJR4QS52QJ6MFSMJFVZ5ZKVSDDAPZQQTWXRBQBDV2AVBQN4HZJYAQ7DPKVYV7FV4TTTFJ4C46X5GD0CW5XHXKSBQHA77ZT75JLFXAQCTJN0F1GP0RCHHW51V1YJ11N3B0HDHVLC88XHBM2403GGN6Y8A25MWLPZT4QLWLWJMM9Y5QFSDK7KGPNT6BHP9NR5T5CF1WT688S74JC37VHMPAJB85FMV3715NVARWT2LG10TQW5TY0WJ751TCRJ56PG3824"
+              "selfSignature" : "CXL01250B667YLK8C94Z4JPGQ4FH2QPC2063A4G7R93R0V80VV7WWKPB0TDV0MNYFARPBHSVBH1PBHXQNN8LJYW4C239ZK0K7TAXR2M4G753T108XDKD8PQZYD35PX5G5FFZP1MJ0WS76C0M8ANKW24H71WANL9KXRZAPZB0F4D3PC8L3KHNHV2K77194H5924HZ12W95ZN5P7J451R7QZPAW72CVSD75ACQQ3LNA49YDF92SVH4KPPJYW084K9ABM72T3R9YR16SNBS8AF2WTJN3297H6DWJRK1G5SZWL4DCSZ427Z9Q1G5SX4CTXJLDJQN50G3GXJRQ5Q6DMZ82CCW6759C415KZ519DM0LL7N1Q6Q064FAW02SXS0HMQ5Z1JV5VDABWP2HNZY5VXQX7WAZH"
             },
             "accountantSeal" : {
               "attributes" : {
-                "documentType" : "Guarantor Signature",
-                "documentHash" : "179XXHV549X82770KF6RAAHTSBMQVW5FKG6WQ6GD5H6DKZR870LH",
+                "documentType" : "Guarantor Seal",
+                "documentHash" : "ZT89F4M7773RJ7ZNF4LQBVZJL5MV6GW3M4Y5V80271M8SJC154L0",
                 "watermark" : {
                   "hashingAlgorithm" : "SHA-256",
                   "signingAlgorithm" : "SHA256withRSA",
                   "majorVersion" : 1,
                   "minorVersion" : 0,
-                  "creationTimestamp" : "2015-10-31T02:11:04.776Z",
-                  "expirationTimestamp" : "2083-11-18T05:25:11.776Z"
+                  "creationTimestamp" : "2016-03-26T15:59:24.024Z",
+                  "expirationTimestamp" : "2084-04-13T19:13:31.024Z"
                 },
                 "verificationCitation" : {
-                  "documentLocation" : "http://localhost:8080/DigitalMarketplace/certificate/CJ2KKVT638YH98TNM70MP7BWVQ22FV28",
-                  "documentHash" : "TRGBC9ZH1Y6VJQ8YZG8VDYJHZMN7P3HRW91W4DK90CNT19GPKQD0"
+                  "documentLocation" : "http://localhost:8080/DigitalMarketplace/certificate/Z5BHVYN0W00HVXSLG276SFA6DHB5CM7S",
+                  "documentHash" : "XL16DA8N8V0BVGYG299WP117A9RW2VW8XDF2H7DQCXB9C2363RR0"
                 }
               },
-              "selfSignature" : "NLW4X3K90RG7J664RJJT5X4Q3ZQZL87V3QWV1RLWYY8N4WY4XGZAY74V58CNRKDPQ91WJVVY2KRPMXL3S3CG6A2891LHN1493XBGMYDHB6P2N8G8NR2Z41RJ8MWRYJZK9063RVQPC5BF01Q31QNJY0WK4LLW9FKFZHT91VMRZZQFK0GH24250GWZJM66LJTWTMNBJ2S5PQVB7G1F1P3QJBKMKND4S49FHZ5C24GP4MNZNGZ17X3A11SVBC76W6MS45XA1S8GHBYWRJ6HFNGP522MYQSDW6J82LBV0ZSPB55WH02DH9AA55DQDSCCL53Q0RCT87Y1SN2C9GLLRAB17PY7XTL9H7NZF710K0ZWPWQHF5XV2Y32BS28R8N61HSVWL9S5SL5842SQMNMH6YBZ032AC"
+              "selfSignature" : "D36BFHD76LRL78A64GY8J3FL61QS76QRP0D59PH2V5NC0NK3QWD6LA7X73LDPYNY1NDKSWXGB4DBHMTZRARLHY8YY6T2MQ3KM8P768W5Q7CN4F0KHW5JFK1J7NNL4D2ACXPPWPYXYZDMP55DH9NL9K4H3NPK75613Y792WFPQHMVKKA4BNM7HQC7BK0FF2WLZNXNPYGJB97GFS3P5LW0V68D3W77FRKSG8N35HJR93WRX0V845VMCFP2HDFY2J3D6S50P4AH5Z4B5FXRTH31V99CCZ3ATF0BQW82RC9F1WSG5W4TBGNG7P638PSDF6PKDA4HKLVQQ3J8547ZCDPJJ2FSNXR673J2XA81NM7MT7JHBZ26QDNK6P90T8H8LGSJR8KCQTMVJ1D5SKXS7LFTQ4YWVH"
             }
           }
         }
@@ -234,7 +235,7 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
 
  1. Transfer a _StarBuck_ from the merchant to the consumer:
 
-        Enter command: transfer-token -sender starbucks -receiver coffee-lover -token Z7J78ATLC9L5CGVKRW3ZYJY5DMFJSCGM
+        Enter command: transfer-token -sender starbucks -receiver coffee-lover -token ZN0Z1DTZMZK9HZP6K89X4SP5RC603SD0
         Enter notary key password for the starbucks: SB
         Enter notary key password for the coffee-lover: CL
         INFO Transfering the token from the sender to the receiver...
@@ -242,14 +243,14 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
         INFO recordResponse: {
           "status" : "Succeeded",
           "reason" : "Created",
-          "transactionLocation" : "http://localhost:8080/DigitalMarketplace/transaction/CTSJ0WN46CMCXB18M8WMFS5NB41T9H8K"
+          "transactionLocation" : "http://localhost:8080/DigitalMarketplace/transaction/RX00G6MY7N48FAP4H6CWQ29P35FGXYTK"
         }
 
     The consumer now owns this token and is the only identity that is allowed to spend it.
 
  1. View the ledger for the token:
 
-        Enter command: retrieve-ledger -ledger Z7J78ATLC9L5CGVKRW3ZYJY5DMFJSCGM
+        Enter command: retrieve-ledger -ledger ZN0Z1DTZMZK9HZP6K89X4SP5RC603SD0
         INFO Retrieving the ledger...
         INFO retrieveResponse: {
           "status" : "Succeeded",
@@ -257,60 +258,60 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
           "ledger" : [
             {
               "attributes" : {
-                "myLocation" : "http://localhost:8080/DigitalMarketplace/transaction/CTSJ0WN46CMCXB18M8WMFS5NB41T9H8K",
-                "senderLocation" : "http://localhost:8080/DigitalMarketplace/identity/95GTB3VYDS5GTRHCZ86FPV4734HRF54R",
-                "receiverLocation" : "http://localhost:8080/DigitalMarketplace/identity/8CFCWKFLJKGCZZ0S6KT0TWYVKXC1RX2B",
+                "myLocation" : "http://localhost:8080/DigitalMarketplace/transaction/RX00G6MY7N48FAP4H6CWQ29P35FGXYTK",
+                "senderLocation" : "http://localhost:8080/DigitalMarketplace/identity/479VC9FTZXTR5X7TBLFV3BVLN4TF5ZHP",
+                "receiverLocation" : "http://localhost:8080/DigitalMarketplace/identity/F6P7WC61VA15ZA6FTG3FDPGW3BNQZ0N2",
                 "transactionType" : "Token Transfer",
                 "tokenCitation" : {
-                  "documentLocation" : "http://localhost:8080/DigitalMarketplace/token/Z7J78ATLC9L5CGVKRW3ZYJY5DMFJSCGM",
-                  "documentHash" : "WTAJAGYM3WL8ATVKS6LYXHJ30R6NYLS19V0HYPKBFZ4KPXNP5SZ0"
+                  "documentLocation" : "http://localhost:8080/DigitalMarketplace/token/ZN0Z1DTZMZK9HZP6K89X4SP5RC603SD0",
+                  "documentHash" : "1Z6Y3X2BGAGKCQ8NV7BHBXVY8CB0CRBKPHAVKXTGKK0J4NP8DCT0"
                 },
                 "watermark" : {
                   "hashingAlgorithm" : "SHA-256",
                   "signingAlgorithm" : "SHA256withRSA",
                   "majorVersion" : 1,
                   "minorVersion" : 0,
-                  "creationTimestamp" : "2015-10-31T02:15:11.961Z",
-                  "expirationTimestamp" : "2083-11-18T05:29:18.961Z"
+                  "creationTimestamp" : "2016-03-26T16:04:49.589Z",
+                  "expirationTimestamp" : "2084-04-13T19:18:56.589Z"
                 }
               },
               "senderSeal" : {
                 "attributes" : {
                   "documentType" : "Transaction Attributes",
-                  "documentHash" : "FZB15KBT9F0J9S8B4JTKCSQ7Y0SV6R3C4YJDGR892V05DLMQF2LH",
+                  "documentHash" : "9R5F21Q6ZLRB13C2AYNB8652BVZTN4R7KR0DDT44AFSD17MAT810",
                   "watermark" : {
                     "hashingAlgorithm" : "SHA-256",
                     "signingAlgorithm" : "SHA256withRSA",
                     "majorVersion" : 1,
                     "minorVersion" : 0,
-                    "creationTimestamp" : "2015-10-31T02:15:11.965Z",
-                    "expirationTimestamp" : "2083-11-18T05:29:18.965Z"
+                    "creationTimestamp" : "2016-03-26T16:04:49.591Z",
+                    "expirationTimestamp" : "2084-04-13T19:18:56.591Z"
                   },
                   "verificationCitation" : {
-                    "documentLocation" : "http://localhost:8080/DigitalMarketplace/certificate/F2Y3QX8YWM69NFC2JKDXCB69TAR8M2K1",
-                    "documentHash" : "80DT1BL54M360Y68M6HBNGXZWR7Q3AKCCY0HWNCQVA47HF438F8H"
+                    "documentLocation" : "http://localhost:8080/DigitalMarketplace/certificate/LS5DS396212F1ZFWHJ07JVTK0NJ5TSQN",
+                    "documentHash" : "AB39B2Y9W5DVMX2B4CG9L49HD485DYMNMABNFJ23M94ZKWPNK33H"
                   }
                 },
-                "selfSignature" : "8L2TG9VVD8RVMSP71D5FAL6A0KSBDQF65W6HYKVTR2L5PN59A4QCCGJ2DT6V7GLJ8Z6JH1X1CJDPP5KV5HR5MRGCS752MX0FAPRD51ZQ96APYN9K36K4JL4PV4AL0XXKM3B4N40WL38F0ASHLYB2A208T47C960717XY1ANQGDCNGVAWT5ZWFF7HCB2FV98FVRMNAW29NV5LR6J2N8G6J85KT6V5LQKDYZJRX6375S680L71K8V4ABXH055Y0X4QXPDLY5BV1Z6QR0MFYX0SCXN17HC14VMVM3Q8WG4R2BT7N57T6J5TRZLTBTJ5DRZJHXXPT70R207YBK7HBJ74B7XVK1377V2FAS85H8F3BPY7QV9PY2S2BB4FBM90YP9Y78TGR9RVPZQ70VC0D9AR1K8958"
+                "selfSignature" : "3KWXKXGAF9AJ21XZB0PNHR17Z95L5R38D45DPLTADYL93QM9NRDZARDZ13B74GWS743VCXF1HRARLPX3H8TDF7RH42K6TQZDDLNQBJNZ1FYSYLRKMHYFGFWDL0TZGFCVCQ8TX370VJVCHD0M0DL2HXLNZLHVNCG1MZ1AAD6S1GTZZFLQLB31S3R4LF10KVZDYTWDSY3FT000V4QXDS2P0THWFHA2B5HRTPFZPQ73YNM2N1XQHMY2MSJNHRVHSM4Z0SA4W1GCRAZMDGQ35C7AD9YRW18VRJCGX8X78H1NKV4ZZA1ZGD44R58TVHZMSAKC51GPFXCYDMP1C5TVVC7Z0QHZ60K9MLN4XH03G69MNCZ9KBAPA36JAK072K93T4VWCL92CGGDANRYVYQ2XCXHBQY038"
               },
               "receiverSeal" : {
                 "attributes" : {
                   "documentType" : "Sender Signature",
-                  "documentHash" : "RMT7HQ5VCRYALS7ZCJ7ZL16SP423WRQDM8CPVAJMAZQF0N3CM2G0",
+                  "documentHash" : "3KWTL79RRLD1LDL87S4YV8DZ033WYTDNSJD97WNQAN0AF4DGM4GH",
                   "watermark" : {
                     "hashingAlgorithm" : "SHA-256",
                     "signingAlgorithm" : "SHA256withRSA",
                     "majorVersion" : 1,
                     "minorVersion" : 0,
-                    "creationTimestamp" : "2015-10-31T02:15:12.006Z",
-                    "expirationTimestamp" : "2083-11-18T05:29:19.006Z"
+                    "creationTimestamp" : "2016-03-26T16:04:49.636Z",
+                    "expirationTimestamp" : "2084-04-13T19:18:56.636Z"
                   },
                   "verificationCitation" : {
-                    "documentLocation" : "http://localhost:8080/DigitalMarketplace/certificate/K0F71VDK9RCCP5Y93220696T4WJ5Q06S",
-                    "documentHash" : "KSGLGLKRB8SNWYFNWTC804NF8QH1H9Y8DGG1KHR67ADAR7KPRAQ0"
+                    "documentLocation" : "http://localhost:8080/DigitalMarketplace/certificate/AAGLBR6ZH9QGCRVMHZRGY6052C5YV93X",
+                    "documentHash" : "7XRGDKCN0X2SJWV86YR1Y5NBRJM6NVNJ35B62TJD742L1DGP7310"
                   }
                 },
-                "selfSignature" : "BX9BANW0HF626V0XYW9BVKTFVK1ZH5LA9DAZ2DYD6D0G53ML5HJ7QB03QYV0TW2BBTDS0KR6TWTCPKP6NDT3T4TGP82WQLZ9QFBJPBFLZQPWDC6LCBMQRGN0H44MYYWN0C9CDSKHSK97AL7DZD6VZNVXVFFZ4HCKGFTBW7G78Q9QPN6954JPXVDG1RZQ6ZRS52NP451TS8PXVLKACRJAG1YNS2HV4H3VN8FGJNL7KJRZNA3K59JCQR848LQ1CH2ZGR6GD492BLSKB2WNQAPJ5VH8QB21B772ND1ZRVPZ1QGC404VGLL3QNJQZPT4MTVN9X7BKHR1Y7HZ7TQHXZYSZ9XDXQAGDLZZT4K4H9VM39RGPNWBV0TNBT2C9CPBDCJ4GB3VMGN7THRNPTYMFZAQB5XX98"
+                "selfSignature" : "1BZAAYRPS4SGRXC936VW09AB050AZY99T5F5D6SAMZ272CF3QJTRWRMQL2Q9500PVYKKRMN0A1JVD08RSCMMAJCLM7PMNX3SN00WZ51D5DMRC0SX23R5M3J5GPFSJT5DA0N1Z57ZB3AVX3TJJRGL2X3C18A4683KV3WLQYLJVNG1B3F3RCZFZYZQ3F6N6NXVSZTGM13QQJJLZ0D5WKJ0SKDDD4V0K7TJBKY9RHX3L7PP0QCQJQSFL1FTCHQ9TAVNK6WYGNG66YN0BGMPKRNW53WAM80KJJW0J4PDCZSZSR655BYGSWDX0V2WPPJJ9QW028PYA1H984LDVQW3L6GQZBJTFT22K3L6SRHX9819F71G9YBN2J6B2YF2RTYMRB6JFK286RQQYJCDTF1D1XHGCA7LT4"
               }
             }
           ]
