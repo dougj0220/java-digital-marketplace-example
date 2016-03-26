@@ -167,7 +167,7 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
 
     There are now 10 new _certified digital tokens_ in the digital bank managed by the digital marketplace web service.  The tokens are currently owned by the merchant "starbucks".
 
- 1. Retrieve one of the new tokens:
+ 1. Retrieve one of the new tokens (*you will need to use one of the token identifiers from your list*):
 
         Enter command: retrieve-token -token ZN0Z1DTZMZK9HZP6K89X4SP5RC603SD0
         INFO Retrieving the token...
