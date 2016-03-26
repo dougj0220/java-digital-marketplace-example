@@ -167,7 +167,7 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
 
     There are now 10 new _certified digital tokens_ in the digital bank managed by the digital marketplace web service.  The tokens are currently owned by the merchant "starbucks".
 
- 1. Retrieve one of the new tokens (*you will need to use one of the token identifiers from your list*):
+ 1. Retrieve one of the new tokens (_you will need to use one of the token identifiers from your list_):
 
         Enter command: retrieve-token -token ZN0Z1DTZMZK9HZP6K89X4SP5RC603SD0
         INFO Retrieving the token...
@@ -233,7 +233,7 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
 
     You can see that the new token has been notarized by _both_ the merchant and the digital accountant. This makes it _impossible_ for either one of them to modify the token without being detected.
 
- 1. Transfer a _StarBuck_ from the merchant to the consumer:
+ 1. Transfer a _StarBuck_ from the merchant to the consumer (_use the same token identifier from your list as above_):
 
         Enter command: transfer-token -sender starbucks -receiver coffee-lover -token ZN0Z1DTZMZK9HZP6K89X4SP5RC603SD0
         Enter notary key password for the starbucks: SB
@@ -248,7 +248,7 @@ A simple _command line interface_ (CLI) is provided to let you create new digita
 
     The consumer now owns this token and is the only identity that is allowed to spend it.
 
- 1. View the ledger for the token:
+ 1. View the ledger for the token (_use the same token identifier from your list as above_):
 
         Enter command: retrieve-ledger -ledger ZN0Z1DTZMZK9HZP6K89X4SP5RC603SD0
         INFO Retrieving the ledger...
