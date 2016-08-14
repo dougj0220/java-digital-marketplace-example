@@ -82,7 +82,7 @@ public abstract class ServiceResponse<T extends SmartObject<T>> extends SmartObj
      * This method allows the setting of multiple additional attributes that are not explicitly
      * defined.
      *
-     * @param attributes
+     * @param attributes The attributes to be added.
      */
     public void putAll(Map<String, Object> attributes) {
         for (Map.Entry<String, Object> attribute : attributes.entrySet()) {

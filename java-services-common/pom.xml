@@ -50,7 +50,7 @@
     </developers>
 
     <properties>
-        <java-smart-objects-version>3.13</java-smart-objects-version>
+        <java-smart-objects-version>3.14</java-smart-objects-version>
     </properties>
 
     <dependencies>

@@ -50,9 +50,9 @@
     </developers>
 
     <properties>
-        <java-digital-identities-version>1.4</java-digital-identities-version>
-        <java-digital-tokens-version>1.4</java-digital-tokens-version>
-        <java-digital-accounting-version>1.5</java-digital-accounting-version>
+        <java-digital-identities-version>1.5</java-digital-identities-version>
+        <java-digital-tokens-version>1.5</java-digital-tokens-version>
+        <java-digital-accounting-version>1.6</java-digital-accounting-version>
     </properties>
 
     <dependencies>

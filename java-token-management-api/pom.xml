@@ -50,9 +50,9 @@
     </developers>
 
     <properties>
-        <java-digital-tokens-version>1.4</java-digital-tokens-version>
-        <java-digital-accounting-version>1.5</java-digital-accounting-version>
-        <java-smart-objects-version>3.13</java-smart-objects-version>
+        <java-digital-tokens-version>1.5</java-digital-tokens-version>
+        <java-digital-accounting-version>1.6</java-digital-accounting-version>
+        <java-smart-objects-version>3.14</java-smart-objects-version>
     </properties>
 
     <dependencies>
